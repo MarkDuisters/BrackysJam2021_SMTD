@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4561481711134426539}
   - component: {fileID: 2267200621567048911}
   - component: {fileID: 7829431807683492536}
-  - component: {fileID: 3267934689097155724}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -82,20 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &3267934689097155724
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3002567551574872160}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4969283735059340303
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,6 +94,7 @@ GameObject:
   - component: {fileID: 8192288850010032255}
   - component: {fileID: 2185988481904848575}
   - component: {fileID: 7572577828197824864}
+  - component: {fileID: 4659875401887963829}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Untagged
@@ -180,9 +166,9 @@ SphereCollider:
   m_GameObject: {fileID: 4969283735059340303}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Radius: 1.93
+  m_Radius: 1.54
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &2185988481904848575
 Rigidbody:
@@ -256,7 +242,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -296,3 +282,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!136 &4659875401887963829
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4969283735059340303}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
