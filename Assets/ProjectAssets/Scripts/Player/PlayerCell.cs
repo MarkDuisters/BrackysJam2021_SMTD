@@ -15,11 +15,10 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
     Rigidbody rb;
 
     [SerializeField] Transform followTarget;
+    [SerializeField] float followThreshold = 1f;
 
-    [Header ("Interface")]
-    [SerializeField] private byte setCellType = 0;
-    public byte cellType { get; set; }
-    // public GameObject masterCell { get; set; }
+
+    [Header ("IDamagable interface")]
 
     [SerializeField] private int setHP = 1;
     public int hp { get; set; }
@@ -27,11 +26,17 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
     [SerializeField] private int setDmg = 1;
     public int dmg { get; set; }
 
-    [SerializeField] private bool setAlive;
-    public bool alive { get; set; }
+    [Header ("Icell interface")]
+    [SerializeField] private byte setCellType = 0;
+    public byte cellType { get; set; }
+    // public GameObject masterCell { get; set; }
+
 
     [SerializeField] private int setSplitAmount = 2;
     public int splitAmount { get; set; }
+
+    [SerializeField] private int setEnergy = 1;
+    public int energy { get; set; }
 
     public AudioSource playSplitSound { get; set; }
 
@@ -43,21 +48,25 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
         cellType = setCellType;
         hp = setHP;
         dmg = setDmg;
-        alive = setAlive;
         playSplitSound = GetComponent<AudioSource> ();
         splitAmount = setSplitAmount;
+        energy=setEnergy;
         splitSound = setSplitSound;
         rb = GetComponent<Rigidbody> ();
-        print ($"test:-hp:{hp},-alive:{alive},-dmg:{dmg}");
     }
 
     void Update ()
     {
 
         currentSpeed = speed;
-        Vector3 forward = transform.forward * currentSpeed;
+        Vector3 forward = new Vector3 ();
+        float distance = Vector3.Distance (transform.position, followTarget.position);
+        if (distance >= followThreshold)
+        {
+            forward = transform.forward * distance * currentSpeed;
+        }
 
-        lookDir = transform.position - followTarget.position;
+        lookDir = followTarget.position - transform.position;
 
         moveDir = forward;
         //   moveDir = new Vector3 (moveDir.x, rb.velocity.y, moveDir.z);
@@ -74,8 +83,9 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
     {
 
         //de berekende move en rotation vectoren worden hier in FixedUpdate toegepast.
-        rb.velocity = moveDir;
         rb.rotation = Quaternion.LookRotation (lookDir);
+        rb.velocity = moveDir;
+
     }
 
     public void ApplyDamage (int getDmg)
@@ -96,6 +106,13 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
             playSplitSound.PlayOneShot (splitSound[Random.Range (0, splitSound.Length - 1)]);
             print ("I cloned myself!");
         }
+
+        Destroy (gameObject);
+
+    }
+
+    public void DrainEnergy ()
+    {
 
     }
 

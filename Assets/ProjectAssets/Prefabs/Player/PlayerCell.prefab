@@ -48,13 +48,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d9003e68abf0242816c5ace9143744, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentSpeed: 0
+  speed: 8
   followTarget: {fileID: 0}
+  followThreshold: 1
   setCellType: 0
   setHP: 1
   setDmg: 1
   setAlive: 0
   setSplitAmount: 2
-  setSplitSound: []
+  setSplitSound:
+  - {fileID: 8300000, guid: 86aefd3718351b34f8c0c1f1acce6677, type: 3}
+  - {fileID: 8300000, guid: 3b8ece859cd03994b83f8f6695432c59, type: 3}
+  - {fileID: 8300000, guid: e9feb3867ad05534c922778b44e382a7, type: 3}
+  - {fileID: 8300000, guid: dd55a6686e5719d4cb255ec5bc8fa2f3, type: 3}
+  - {fileID: 8300000, guid: 4ef24067942ee7e4da816d66287a43a7, type: 3}
+  - {fileID: 8300000, guid: f6e7063c01e62214081d4b5e967db139, type: 3}
+  - {fileID: 8300000, guid: a7a3daf0ed523844391bf39b2ee21683, type: 3}
+  - {fileID: 8300000, guid: 70113dffc26cf8e4db5427d1db62689c, type: 3}
+  - {fileID: 8300000, guid: 664bd0b24e83306419f7a16ab0c81f77, type: 3}
+  - {fileID: 8300000, guid: 20b93178c897e1d4a9c03afa35ebdf79, type: 3}
+  - {fileID: 8300000, guid: 60c9c9511ef6f464f8e436cc397c970e, type: 3}
+  - {fileID: 8300000, guid: f85601c93dd778848be864071bcdbb2e, type: 3}
+  - {fileID: 8300000, guid: 951421bc86ee3ba4ab7fc9f5d96c86aa, type: 3}
+  - {fileID: 8300000, guid: f32114cd44d3dee4d90d95d6538995b7, type: 3}
+  - {fileID: 8300000, guid: 55b34f3db000a1c40bf06c379ea833b8, type: 3}
+  - {fileID: 8300000, guid: 3f59fa3dace1d61458440304e883f804, type: 3}
+  - {fileID: 8300000, guid: 6b51002f4c1defb4b8e2dc41ae39925d, type: 3}
+  - {fileID: 8300000, guid: c88a18a54cb89924daa717794da94da0, type: 3}
+  - {fileID: 8300000, guid: 64e2278668d8e5c4d82f2b1df453c474, type: 3}
+  - {fileID: 8300000, guid: cb09dcc6251fa614498a3c18f1254712, type: 3}
+  - {fileID: 8300000, guid: 59543ffb35b1cf54c8f9caebd9a5479e, type: 3}
+  - {fileID: 8300000, guid: 5f45c9d5c36e05940803bb1bcd44b9b8, type: 3}
 --- !u!135 &8192288850010032255
 SphereCollider:
   m_ObjectHideFlags: 0

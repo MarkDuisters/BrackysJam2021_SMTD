@@ -36,7 +36,8 @@ public class PlayerControllTarget : MonoBehaviour
         Vector3 right = cam.transform.right * Input.GetAxis ("Horizontal") * currentSpeed;
 
         moveDir = forward + right;
-        moveDir = new Vector3 (moveDir.x, rb.velocity.y, moveDir.z);
+       // moveDir = new Vector3 (moveDir.x, rb.velocity.y, moveDir.z);
+        lookDir = cam.transform.forward;
 
     }
 
@@ -50,6 +51,7 @@ public class PlayerControllTarget : MonoBehaviour
     {
 
         //de berekende move en rotation vectoren worden hier in FixedUpdate toegepast.
+        rb.rotation = Quaternion.LookRotation (lookDir);
         rb.velocity = moveDir;
     }
 
