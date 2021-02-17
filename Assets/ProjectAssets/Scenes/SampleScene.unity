@@ -14,12 +14,12 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.65080994, g: 0.666729, b: 0.7075472, a: 1}
-  m_FogMode: 3
+  m_Fog: 1
+  m_FogColor: {r: 1, g: 0.29029948, b: 0, a: 1}
+  m_FogMode: 1
   m_FogDensity: 0.05
   m_LinearFogStart: 0
-  m_LinearFogEnd: 300
+  m_LinearFogEnd: 160
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.2554555, g: 0.09056566, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.023349017, g: 0.0007167519, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -258,6 +258,10 @@ PrefabInstance:
     - target: {fileID: 1625564346598670220, guid: a2b466c098b173841aa4adf13488de9e, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625564346598670221, guid: a2b466c098b173841aa4adf13488de9e, type: 3}
+      propertyPath: far clip plane
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 1625564347545022768, guid: a2b466c098b173841aa4adf13488de9e, type: 3}
       propertyPath: m_RootOrder
@@ -1010,34 +1014,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mark_Prefab
       objectReference: {fileID: 0}
-    - target: {fileID: 5319349194468566778, guid: 17775902a86980b47b2707c13710241f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.803264
-      objectReference: {fileID: 0}
-    - target: {fileID: 5319349194468566778, guid: 17775902a86980b47b2707c13710241f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.77
-      objectReference: {fileID: 0}
-    - target: {fileID: 5319349194468566778, guid: 17775902a86980b47b2707c13710241f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.7600604
-      objectReference: {fileID: 0}
-    - target: {fileID: 5319349194468566778, guid: 17775902a86980b47b2707c13710241f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5319349194468566778, guid: 17775902a86980b47b2707c13710241f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5319349194468566778, guid: 17775902a86980b47b2707c13710241f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5319349194468566778, guid: 17775902a86980b47b2707c13710241f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
     - target: {fileID: 6534920281421210677, guid: 17775902a86980b47b2707c13710241f, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1081,10 +1057,6 @@ PrefabInstance:
     - target: {fileID: 6534920281421210677, guid: 17775902a86980b47b2707c13710241f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7309816696175176729, guid: 17775902a86980b47b2707c13710241f, type: 3}
-      propertyPath: resource
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17775902a86980b47b2707c13710241f, type: 3}
