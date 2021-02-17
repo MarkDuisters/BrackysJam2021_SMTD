@@ -4,12 +4,22 @@ using UnityEngine;
 
 [RequireComponent (typeof (AudioSource))]
 [RequireComponent (typeof (Rigidbody))]
-public class Player : MonoBehaviour, Icell, IDamagable
+public class PlayerCell : MonoBehaviour, Icell, IDamagable
 {
+    [Header ("Movement")]
+    [SerializeField] float currentSpeed;
+    [SerializeField] float speed = 1;
+    Vector3 moveDir;
+    Vector3 lookDir;
 
+    Rigidbody rb;
+
+    [SerializeField] Transform followTarget;
+
+    [Header ("Interface")]
     [SerializeField] private byte setCellType = 0;
     public byte cellType { get; set; }
-   // public GameObject masterCell { get; set; }
+    // public GameObject masterCell { get; set; }
 
     [SerializeField] private int setHP = 1;
     public int hp { get; set; }
@@ -37,8 +47,35 @@ public class Player : MonoBehaviour, Icell, IDamagable
         playSplitSound = GetComponent<AudioSource> ();
         splitAmount = setSplitAmount;
         splitSound = setSplitSound;
-
+        rb = GetComponent<Rigidbody> ();
         print ($"test:-hp:{hp},-alive:{alive},-dmg:{dmg}");
+    }
+
+    void Update ()
+    {
+
+        currentSpeed = speed;
+        Vector3 forward = transform.forward * currentSpeed;
+
+        lookDir = transform.position - followTarget.position;
+
+        moveDir = forward;
+        //   moveDir = new Vector3 (moveDir.x, rb.velocity.y, moveDir.z);
+
+    }
+
+    void FixedUpdate ()
+    {
+        Movement ();
+
+    }
+
+    void Movement ()
+    {
+
+        //de berekende move en rotation vectoren worden hier in FixedUpdate toegepast.
+        rb.velocity = moveDir;
+        rb.rotation = Quaternion.LookRotation (lookDir);
     }
 
     public void ApplyDamage (int getDmg)
@@ -73,7 +110,7 @@ public class Player : MonoBehaviour, Icell, IDamagable
             if (getIcell.cellType != cellType)
             {
                 getIdamagable.ApplyDamage (dmg);
-                print ("I dealt damage to-");
+                print ("I dealt damage to-" + col.name);
             }
 
         }
