@@ -9,6 +9,7 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
     [Header ("Movement")]
     [SerializeField] float currentSpeed;
     [SerializeField] float speed = 1;
+    [SerializeField] float dash = 2;
     Vector3 moveDir;
     Vector3 lookDir;
 
@@ -16,7 +17,6 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
 
     [SerializeField] Transform followTarget;
     [SerializeField] float followThreshold = 1f;
-
 
     [Header ("IDamagable interface")]
 
@@ -30,7 +30,6 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
     [SerializeField] private byte setCellType = 0;
     public byte cellType { get; set; }
     // public GameObject masterCell { get; set; }
-
 
     [SerializeField] private int setSplitAmount = 2;
     public int splitAmount { get; set; }
@@ -50,7 +49,7 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
         dmg = setDmg;
         playSplitSound = GetComponent<AudioSource> ();
         splitAmount = setSplitAmount;
-        energy=setEnergy;
+        energy = setEnergy;
         splitSound = setSplitSound;
         rb = GetComponent<Rigidbody> ();
     }
@@ -58,7 +57,7 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
     void Update ()
     {
 
-        currentSpeed = speed;
+        currentSpeed = Input.GetButton ("Dash") ? speed * dash : speed;
         Vector3 forward = new Vector3 ();
         float distance = Vector3.Distance (transform.position, followTarget.position);
         if (distance >= followThreshold)
@@ -103,8 +102,13 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
         for (int i = 0; i < splitAmount; i++)
         {
             GameObject clone = Instantiate (gameObject);
-            playSplitSound.PlayOneShot (splitSound[Random.Range (0, splitSound.Length - 1)]);
-            print ("I cloned myself!");
+
+            if (clone.GetComponent<Icell> ().playSplitSound == null)
+            {
+                clone.GetComponent<Icell> ().playSplitSound = clone.GetComponent<AudioSource> ();
+            }
+            clone.GetComponent<Icell> ().playSplitSound.PlayOneShot (splitSound[Random.Range (0, splitSound.Length - 1)]);
+            //            print ("I cloned myself!");
         }
 
         Destroy (gameObject);

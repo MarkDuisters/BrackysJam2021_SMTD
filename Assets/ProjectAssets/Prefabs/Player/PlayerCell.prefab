@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 2185988481904848575}
   - component: {fileID: 7572577828197824864}
   - component: {fileID: 634296620387828018}
+  - component: {fileID: 8232266000264845768}
   m_Layer: 0
   m_Name: PlayerCell
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,14 +50,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentSpeed: 0
-  speed: 8
+  speed: 2
   followTarget: {fileID: 0}
   followThreshold: 1
-  setCellType: 0
   setHP: 1
   setDmg: 1
-  setAlive: 0
+  setCellType: 0
   setSplitAmount: 2
+  setEnergy: 1
   setSplitSound:
   - {fileID: 8300000, guid: 86aefd3718351b34f8c0c1f1acce6677, type: 3}
   - {fileID: 8300000, guid: 3b8ece859cd03994b83f8f6695432c59, type: 3}
@@ -165,7 +166,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.811
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -219,6 +220,20 @@ CapsuleCollider:
   m_Height: 0.45
   m_Direction: 2
   m_Center: {x: -0.000000007450581, y: 0, z: 0.094545}
+--- !u!182 &8232266000264845768
+WindZone:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4969283735059340303}
+  m_Enabled: 1
+  m_Mode: 1
+  m_Radius: 3.17
+  m_WindMain: 1
+  m_WindTurbulence: 1
+  m_WindPulseMagnitude: 0.5
+  m_WindPulseFrequency: 0.01
 --- !u!1001 &2323725014130493071
 PrefabInstance:
   m_ObjectHideFlags: 0

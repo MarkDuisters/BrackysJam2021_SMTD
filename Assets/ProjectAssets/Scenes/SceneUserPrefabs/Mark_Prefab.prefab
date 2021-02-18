@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cellType: 0
-  resource: 10
+  resource: 1
 --- !u!1 &4725875509039231573
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,6 +417,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5244450424689978955, guid: 5b25841363e31db418430a597ff96e13, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275104658103205512, guid: 5b25841363e31db418430a597ff96e13, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

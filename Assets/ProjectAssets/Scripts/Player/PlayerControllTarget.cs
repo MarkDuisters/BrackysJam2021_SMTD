@@ -14,8 +14,6 @@ public class PlayerControllTarget : MonoBehaviour
     Rigidbody rb;
     [SerializeField] Camera cam;
 
-    private bool horizontal = false, vertical = false;
-
     void Start ()
     {
         rb = GetComponent<Rigidbody> ();
@@ -29,14 +27,12 @@ public class PlayerControllTarget : MonoBehaviour
 
     void Update ()
     {
-        Buttons ();
-
         currentSpeed = Input.GetButton ("Dash") ? speed * sprint : speed;
         Vector3 forward = cam.transform.forward * Input.GetAxis ("Vertical") * currentSpeed;
         Vector3 right = cam.transform.right * Input.GetAxis ("Horizontal") * currentSpeed;
 
         moveDir = forward + right;
-       // moveDir = new Vector3 (moveDir.x, rb.velocity.y, moveDir.z);
+        // moveDir = new Vector3 (moveDir.x, rb.velocity.y, moveDir.z);
         lookDir = cam.transform.forward;
 
     }
@@ -55,25 +51,4 @@ public class PlayerControllTarget : MonoBehaviour
         rb.velocity = moveDir;
     }
 
-    void Buttons ()
-    {
-        if (Input.GetButtonDown ("Horizontal"))
-        {
-            horizontal = true;
-        }
-        else if (Input.GetButtonUp ("Horizontal"))
-        {
-            horizontal = false;
-        }
-
-        if (Input.GetButtonDown ("Vertical"))
-        {
-            vertical = true;
-        }
-        else if (Input.GetButtonUp ("Vertical"))
-        {
-            vertical = false;
-        }
-
-    }
 }
