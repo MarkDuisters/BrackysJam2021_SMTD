@@ -9,5 +9,6 @@ public interface IDamagable
     public int dmg { get; set; }
 
     public void ApplyDamage (int dmg);
+    public void Kill ();
 
 }

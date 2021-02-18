@@ -6,7 +6,8 @@ public class SplitCell : MonoBehaviour
 {
 
     public int cellType = 0;
-    public int resource = 10;
+    public int resource = 2;
+
     // Update is called once per frame
     void OnTriggerEnter (Collider col)
     {
@@ -16,7 +17,7 @@ public class SplitCell : MonoBehaviour
             getIcell.Split ();
             resource--;
         }
-        else
+        if (resource <= 0)
         {
             gameObject.SetActive (false);
 

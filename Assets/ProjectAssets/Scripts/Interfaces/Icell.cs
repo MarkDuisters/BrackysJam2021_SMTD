@@ -8,7 +8,8 @@ public interface Icell
 
     public byte cellType { get; set; }
     //public GameObject masterCell { get; set; }
-    public int energy{get;set;}
+    public float energy { get; set; }
+    public float energyDrain { get; set; }
 
     public int splitAmount { get; set; }
     public AudioSource playSplitSound { get; set; }

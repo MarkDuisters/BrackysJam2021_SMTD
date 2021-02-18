@@ -34,8 +34,11 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
     [SerializeField] private int setSplitAmount = 2;
     public int splitAmount { get; set; }
 
-    [SerializeField] private int setEnergy = 1;
-    public int energy { get; set; }
+    [SerializeField] private float setEnergy = 1;
+    public float energy { get; set; }
+
+    [SerializeField] private float setEnergyDrain = 1;
+    public float energyDrain { get; set; }
 
     public AudioSource playSplitSound { get; set; }
 
@@ -50,6 +53,7 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
         playSplitSound = GetComponent<AudioSource> ();
         splitAmount = setSplitAmount;
         energy = setEnergy;
+        energyDrain = setEnergyDrain;
         splitSound = setSplitSound;
         rb = GetComponent<Rigidbody> ();
     }
@@ -68,6 +72,8 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
         lookDir = followTarget.position - transform.position;
 
         moveDir = forward;
+
+        DrainEnergy ();
         //   moveDir = new Vector3 (moveDir.x, rb.velocity.y, moveDir.z);
 
     }
@@ -93,31 +99,61 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
 
         if (hp <= 0)
         {
-            Destroy (gameObject);
+            Kill ();
         }
+    }
+    public void Kill ()
+    {
+        Destroy (gameObject);
     }
 
     public void Split ()
     {
-        for (int i = 0; i < splitAmount; i++)
+
+        GameObject clone = Instantiate (gameObject);
+        clone.name = "CellClone";
+
+        if (clone.GetComponent<Icell> ().playSplitSound == null)
+        {
+            clone.GetComponent<Icell> ().playSplitSound = clone.GetComponent<AudioSource> ();
+            clone.GetComponent<Icell> ().playSplitSound.PlayOneShot (splitSound[Random.Range (0, splitSound.Length - 1)]);
+
+        }
+
+        //     StartCoroutine (SplitRoutine ());
+        //  Destroy (gameObject);
+
+    }
+    IEnumerator SplitRoutine ()
+    {
+        int i = 0;
+        while (i < splitAmount)
         {
             GameObject clone = Instantiate (gameObject);
+            //      print(clone.name);
 
             if (clone.GetComponent<Icell> ().playSplitSound == null)
             {
                 clone.GetComponent<Icell> ().playSplitSound = clone.GetComponent<AudioSource> ();
+                clone.GetComponent<Icell> ().playSplitSound.PlayOneShot (splitSound[Random.Range (0, splitSound.Length - 1)]);
+
             }
-            clone.GetComponent<Icell> ().playSplitSound.PlayOneShot (splitSound[Random.Range (0, splitSound.Length - 1)]);
+            i++;
+            yield return new WaitForSeconds (1);
             //            print ("I cloned myself!");
         }
-
-        Destroy (gameObject);
 
     }
 
     public void DrainEnergy ()
     {
+        energy -= energyDrain * Time.deltaTime;
+        print (energy);
 
+        if (energy <= 0)
+        {
+            Kill ();
+        }
     }
 
     public void OnTriggerEnter (Collider col)
