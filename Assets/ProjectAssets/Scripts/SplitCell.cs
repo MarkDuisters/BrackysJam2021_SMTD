@@ -5,7 +5,7 @@ using UnityEngine;
 public class SplitCell : MonoBehaviour
 {
 
-    public int cellType = 0;
+    public byte cellType = 0;
     public int resource = 2;
 
     // Update is called once per frame

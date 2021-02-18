@@ -148,7 +148,7 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
     public void DrainEnergy ()
     {
         energy -= energyDrain * Time.deltaTime;
-        print (energy);
+//        print (energy);
 
         if (energy <= 0)
         {

@@ -59,7 +59,7 @@ Cloth:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 641841413286272075}
-  m_Enabled: 1
+  m_Enabled: 0
   m_StretchingStiffness: 1
   m_BendingStiffness: 0.1
   m_UseTethers: 1
@@ -462,7 +462,7 @@ Cloth:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4702862610043958099}
-  m_Enabled: 1
+  m_Enabled: 0
   m_StretchingStiffness: 1
   m_BendingStiffness: 0
   m_UseTethers: 1

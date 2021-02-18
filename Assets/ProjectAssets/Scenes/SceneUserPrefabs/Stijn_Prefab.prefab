@@ -204,6 +204,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 0fd3eefabd91150479031117eccd48d6, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 0fd3eefabd91150479031117eccd48d6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e511ab5430db9184bba0bb7c9660d9ab, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 0fd3eefabd91150479031117eccd48d6, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: e511ab5430db9184bba0bb7c9660d9ab, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 0fd3eefabd91150479031117eccd48d6, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -5375954887142703164, guid: f40376ce81f64c740a1393e7745c199c, type: 3}
     - target: {fileID: 919132149155446097, guid: 0fd3eefabd91150479031117eccd48d6, type: 3}
       propertyPath: m_Name
       value: VeinLevelDesign(Final)
