@@ -617,6 +617,10 @@ PrefabInstance:
       propertyPath: m_AABB.m_Extent.z
       value: 0.03378236
       objectReference: {fileID: 0}
+    - target: {fileID: 682453218892455471, guid: 5b25841363e31db418430a597ff96e13, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2874710513666480023, guid: 5b25841363e31db418430a597ff96e13, type: 3}
       propertyPath: m_Name
       value: '[PlayerContainer]'
