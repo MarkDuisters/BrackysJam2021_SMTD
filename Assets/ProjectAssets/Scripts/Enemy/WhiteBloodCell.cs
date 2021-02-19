@@ -76,7 +76,7 @@ public class WhiteBloodCell : MonoBehaviour, Icell, IDamagable
         float distance = Vector3.Distance (transform.position, followTarget.position);
         //  if (distance >= followThreshold)
         {
-            forward = transform.forward * distance * currentSpeed;
+            forward = (transform.forward * currentSpeed) / (Mathf.Sqrt (distance));
         }
         forward = transform.forward * currentSpeed;
         lookDir = followTarget.position - transform.position;
@@ -117,6 +117,11 @@ public class WhiteBloodCell : MonoBehaviour, Icell, IDamagable
     public void OnTriggerEnter (Collider col)
     {
 
+        if (col.isTrigger == true)
+        {
+            return;
+        }
+
         IDamagable getIdamagable = col.GetComponent<IDamagable> ();
         Icell getIcell = col.GetComponent<Icell> ();
 
@@ -128,19 +133,19 @@ public class WhiteBloodCell : MonoBehaviour, Icell, IDamagable
             {
                 followTarget = col.transform;
 
-                print (followTarget);
+//                print (followTarget);
 
                 //   getIdamagable.ApplyDamage (dmg);
-//                print ("I dealt damage to-" + col.name);
+                //                print ("I dealt damage to-" + col.name);
 
             }
 
         }
 
     }
-    public void OnTriggerExit ()
-    {
-        followTarget = null;
-    }
+    /* public void OnTriggerExit ()
+     {
+         followTarget = null;
+     }*/
 
 }

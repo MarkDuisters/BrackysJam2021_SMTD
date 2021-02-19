@@ -7,10 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CellPickup
+  m_Name: Heart
   m_Shader: {fileID: 4800000, guid: 5de91976c31e43744839fe45f0f62061, type: 3}
-  m_ShaderKeywords: _DEBUGPULSE_ON _EMISSION_ON _METALLICSPECGLOSSMAP _NORMALMAP
-    _PARALLAXMAP
+  m_ShaderKeywords: _METALLICSPECGLOSSMAP _NORMALMAP _PARALLAXMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -158,14 +157,14 @@ Material:
     - _ClearCoatSmoothness: 0
     - _Cull: 2
     - _Cutoff: 0.5
-    - _DebugPulse: 1
+    - _DebugPulse: 0
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DispSpeed: 3
-    - _Displacement: 0.066
+    - _Displacement: 1
     - _DstBlend: 0
-    - _Emission: 1
-    - _EmissionIntensity: 2.15
+    - _Emission: 0
+    - _EmissionIntensity: 1
     - _EnvironmentReflections: 1
     - _Float0: 0.06
     - _GlossMapScale: 0
@@ -176,7 +175,7 @@ Material:
     - _NormalIntensity: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.0323
-    - _PulseAmplitude: 0.72
+    - _PulseAmplitude: 2
     - _PulseFrequentie: 10
     - _PulseSpeed: 3
     - _QueueOffset: 0
@@ -186,7 +185,7 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _SubSurfaceScale: 3.46
+    - _SubSurfaceScale: 50
     - _Surface: 0
     - _TessMax: 30
     - _TessMin: 10
@@ -196,9 +195,9 @@ Material:
     - _TransNormal: 0.557
     - _TransScattering: 2.7
     - _TransShadow: 0.854
-    - _TransStrength: 0
+    - _TransStrength: 4.9
     - _TransmissionShadow: 0.598
-    - _TriPlanarScale: 0.287
+    - _TriPlanarScale: 0.153
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
@@ -206,8 +205,8 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color2: {r: 0.19079015, g: 0, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Skin1: {r: 0, g: 0, b: 0, a: 0}
-    - _Skin2: {r: 1, g: 1, b: 1, a: 0}
+    - _Skin1: {r: 0.28301796, g: 0.012014948, b: 0.06389604, a: 0}
+    - _Skin2: {r: 1, g: 0.7355188, b: 0.7028302, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &1422179085094264940
