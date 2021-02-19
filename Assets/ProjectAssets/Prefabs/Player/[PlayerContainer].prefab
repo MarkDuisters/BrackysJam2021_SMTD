@@ -29,8 +29,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1575488638667690392}
-  m_LocalRotation: {x: 0.008970085, y: 0.8749922, z: -0.015960848, w: 0.4837907}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.028776087, y: 0.8608213, z: -0.03698743, w: 0.5067451}
+  m_LocalPosition: {x: -5.146657, y: -3.583502, z: -1.4078591}
   m_LocalScale: {x: 0.20586, y: 0.20586, z: 0.20586}
   m_Children:
   - {fileID: 5051498703305249065}
@@ -219,7 +219,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1942322725931616392}
   m_LocalRotation: {x: -0.29636672, y: 0.6596904, z: 0.31924123, w: 0.61242175}
-  m_LocalPosition: {x: -6.1879253, y: -7.842036, z: 0.46049252}
+  m_LocalPosition: {x: -11.971937, y: -12.233266, z: -0.89993596}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2634798467382462725}
@@ -251,7 +251,7 @@ MonoBehaviour:
     FieldOfView: 25
     OrthographicSize: 5
     NearClipPlane: 0.1
-    FarClipPlane: 240
+    FarClipPlane: 260
     Dutch: 0
     LensShift: {x: 0, y: 0}
   m_Transitions:
@@ -284,13 +284,13 @@ MonoBehaviour:
   m_MinimumDistanceFromTarget: 0.1
   m_AvoidObstacles: 1
   m_DistanceLimit: 0
-  m_MinimumOcclusionTime: 0
-  m_CameraRadius: 1.74
+  m_MinimumOcclusionTime: 0.25
+  m_CameraRadius: 1.01
   m_Strategy: 0
   m_MaximumEffort: 4
-  m_SmoothingTime: 0
-  m_Damping: 0
-  m_DampingWhenOccluded: 0
+  m_SmoothingTime: 0.08
+  m_Damping: 0.47
+  m_DampingWhenOccluded: 0.26
   m_OptimalTargetDistance: 0
 --- !u!1 &2874710513666480023
 GameObject:
@@ -5313,7 +5313,6 @@ GameObject:
   - component: {fileID: 4869499949482960708}
   - component: {fileID: 2220448501916726823}
   - component: {fileID: 4181506840263065234}
-  - component: {fileID: 1550761055293169199}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -5363,13 +5362,13 @@ MonoBehaviour:
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
-  m_XDamping: 0
-  m_YDamping: 0
-  m_ZDamping: 0
+  m_XDamping: 0.7
+  m_YDamping: 0.8
+  m_ZDamping: 1
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
-  m_CameraDistance: 10
+  m_CameraDistance: 11.03
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
@@ -5452,23 +5451,6 @@ MonoBehaviour:
     m_LegacyHeadingDefinition: -1
     m_LegacyVelocityFilterStrength: -1
   m_ApplyBeforeBody: 0
---- !u!114 &1550761055293169199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7501840087021890474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_NoiseProfile: {fileID: 11400000, guid: 46965f9cbaf525742a6da4c2172a99cd, type: 2}
-  m_PivotOffset: {x: 0, y: 0, z: 0}
-  m_AmplitudeGain: 0.25
-  m_FrequencyGain: 1
-  mNoiseOffsets: {x: -641.5381, y: -251.52026, z: -9.382629}
 --- !u!1001 &1196290784074201939
 PrefabInstance:
   m_ObjectHideFlags: 0
