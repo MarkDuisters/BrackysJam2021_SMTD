@@ -70,7 +70,7 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
         float distance = Vector3.Distance (transform.position, followTarget.position);
         if (distance >= followThreshold)
         {
-            forward = transform.forward * distance * currentSpeed;
+            forward = transform.forward * currentSpeed * Mathf.Sqrt (distance);
         }
 
         lookDir = followTarget.position - transform.position;
@@ -144,8 +144,13 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
         }
     }
 
-    /*  public void OnTriggerEnter (Collider col)
+    public void OnTriggerEnter (Collider col)
     {
+        if (col.isTrigger == true)
+        {
+            return;
+        }
+
         IDamagable getIdamagable = col.GetComponent<IDamagable> ();
         Icell getIcell = col.GetComponent<Icell> ();
 
@@ -155,10 +160,11 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
             if (getIcell.cellType != cellType)
             {
                 getIdamagable.ApplyDamage (dmg);
+                ApplyDamage (getIdamagable.dmg);
                 print ("I dealt damage to-" + col.name);
             }
 
         }
- 
-    }*/
+
+    }
 }
