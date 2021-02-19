@@ -5,24 +5,31 @@ using UnityEngine;
 public class Pause : MonoBehaviour, IGameState
 {
 
-    [SerializeField] bool getIsPaused;
     public bool isPaused { get; set; }
+
+    static public Pause pauseInstance;
 
     void Start ()
     {
+        if (pauseInstance == null)
+        {
+            pauseInstance = this;
+        }
+        else
+        {
+            Destroy (gameObject);
+        }
         DissableMouse ();
     }
     public void PauseGame ()
     {
         EnableMouse ();
         isPaused = true;
-        getIsPaused = isPaused;
     }
     public void UnPauseGame ()
     {
         DissableMouse ();
         isPaused = false;
-        getIsPaused = isPaused;
 
     }
 
