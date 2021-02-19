@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class WhiteBloodCell : MonoBehaviour, Icell, IDamagable
 {
-    [Header ("IDamagable interface")]
+   // [Header ("IDamagable interface")]
     public int hp { get; set; }
     public int dmg { get; set; }
 
-    [Header ("Icell interface")]
+   // [Header ("Icell interface")]
     public byte cellType { get; set; }
     //public GameObject masterCell { get; set; }
     public float energy { get; set; }
