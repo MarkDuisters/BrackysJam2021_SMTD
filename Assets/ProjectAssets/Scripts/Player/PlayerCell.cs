@@ -56,6 +56,7 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
         energyDrain = setEnergyDrain;
         splitSound = setSplitSound;
         rb = GetComponent<Rigidbody> ();
+
     }
 
     void Update ()
@@ -148,7 +149,7 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
     public void DrainEnergy ()
     {
         energy -= energyDrain * Time.deltaTime;
-//        print (energy);
+        //        print (energy);
 
         if (energy <= 0)
         {
