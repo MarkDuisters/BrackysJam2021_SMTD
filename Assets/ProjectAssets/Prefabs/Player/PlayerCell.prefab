@@ -131,7 +131,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d9003e68abf0242816c5ace9143744, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 0
   speed: 2
   dash: 2
   followTarget: {fileID: 0}
@@ -139,7 +138,7 @@ MonoBehaviour:
   setHP: 1
   setDmg: 1
   setCellType: 0
-  setSplitAmount: 1
+  setSplitAmount: 2
   setEnergy: 100
   setEnergyDrain: 0
   setSplitSound:
@@ -174,9 +173,9 @@ SphereCollider:
   m_GameObject: {fileID: 4969283735059340303}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.54
+  m_Radius: 0.34
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &2185988481904848575
 Rigidbody:

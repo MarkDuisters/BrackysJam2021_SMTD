@@ -7,7 +7,7 @@ using UnityEngine;
 public class PlayerCell : MonoBehaviour, Icell, IDamagable
 {
     [Header ("Movement")]
-    [SerializeField] float currentSpeed;
+    float currentSpeed;
     [SerializeField] float speed = 1;
     [SerializeField] float dash = 2;
     Vector3 moveDir;
@@ -26,8 +26,10 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
     [SerializeField] private int setDmg = 1;
     public int dmg { get; set; }
 
+    public enum CellType { Bacteria, WhiteBloodCell }
+
     [Header ("Icell interface")]
-    [SerializeField] private byte setCellType = 0;
+    [SerializeField] CellType setCellType = CellType.Bacteria;
     public byte cellType { get; set; }
     // public GameObject masterCell { get; set; }
 
@@ -47,7 +49,8 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
 
     void Start ()
     {
-        cellType = setCellType;
+        cellType = (byte) setCellType;
+        //        print (cellType);
         hp = setHP;
         dmg = setDmg;
         playSplitSound = GetComponent<AudioSource> ();
@@ -111,37 +114,21 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
     public void Split ()
     {
 
-        GameObject clone = Instantiate (gameObject);
-        clone.name = "CellClone";
-
-        if (clone.GetComponent<Icell> ().playSplitSound == null)
-        {
-            clone.GetComponent<Icell> ().playSplitSound = clone.GetComponent<AudioSource> ();
-            clone.GetComponent<Icell> ().playSplitSound.PlayOneShot (splitSound[Random.Range (0, splitSound.Length - 1)]);
-
-        }
-
-        //     StartCoroutine (SplitRoutine ());
-        //  Destroy (gameObject);
-
-    }
-    IEnumerator SplitRoutine ()
-    {
-        int i = 0;
-        while (i < splitAmount)
+        for (int i = 0; i < splitAmount; i++)
         {
             GameObject clone = Instantiate (gameObject);
-            //      print(clone.name);
-
+            float x, y, z;
+            x = transform.position.x + Random.Range (-0.5f, 0.5f);
+            y = transform.position.y + Random.Range (-0.5f, 0.5f);
+            z = transform.position.z + Random.Range (-0.5f, 0.5f);
+            clone.transform.position = new Vector3 (x, y, z);
+            clone.name = "CellClone";
             if (clone.GetComponent<Icell> ().playSplitSound == null)
             {
                 clone.GetComponent<Icell> ().playSplitSound = clone.GetComponent<AudioSource> ();
                 clone.GetComponent<Icell> ().playSplitSound.PlayOneShot (splitSound[Random.Range (0, splitSound.Length - 1)]);
 
             }
-            i++;
-            yield return new WaitForSeconds (1);
-            //            print ("I cloned myself!");
         }
 
     }
@@ -157,7 +144,7 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
         }
     }
 
-    public void OnTriggerEnter (Collider col)
+    /*  public void OnTriggerEnter (Collider col)
     {
         IDamagable getIdamagable = col.GetComponent<IDamagable> ();
         Icell getIcell = col.GetComponent<Icell> ();
@@ -172,6 +159,6 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
             }
 
         }
-
-    }
+ 
+    }*/
 }

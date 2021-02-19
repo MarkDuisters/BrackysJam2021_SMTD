@@ -9,7 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 498160229931590421}
-  m_Layer: 0
+  - component: {fileID: 619695006394034411}
+  - component: {fileID: 3820702517200860811}
+  - component: {fileID: 7618070622316436259}
+  - component: {fileID: 1299279296189238996}
+  m_Layer: 7
   m_Name: WhiteBloodCell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,6 +35,66 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &619695006394034411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418421787493261773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 053d85fbaad2de2488e8bd1eaed8204d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  followTarget: {fileID: 0}
+  followThreshold: 0
+  setHP: 1
+  setDmg: 1
+  setCellType: 1
+--- !u!135 &3820702517200860811
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418421787493261773}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 9.62
+  m_Center: {x: 0, y: 0.06, z: 0}
+--- !u!135 &7618070622316436259
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418421787493261773}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.41
+  m_Center: {x: 0, y: 0.06, z: 0}
+--- !u!54 &1299279296189238996
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418421787493261773}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 112
+  m_CollisionDetection: 3
 --- !u!1001 &7359295879113831298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -82,13 +146,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8286123516998362751, guid: 6bded93bbd7f7b34dbe78950f7d7b796, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -6672249451487465219, guid: 6bded93bbd7f7b34dbe78950f7d7b796, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 11c37e879e371404eb4e64a4e23d84ca, type: 2}
+    - target: {fileID: -5837586957138623225, guid: 6bded93bbd7f7b34dbe78950f7d7b796, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6bded93bbd7f7b34dbe78950f7d7b796, type: 3}
       propertyPath: m_Name
       value: Wittebloedcell
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6bded93bbd7f7b34dbe78950f7d7b796, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8068984346354923933, guid: 6bded93bbd7f7b34dbe78950f7d7b796, type: 3}
       propertyPath: m_Materials.Array.data[0]
