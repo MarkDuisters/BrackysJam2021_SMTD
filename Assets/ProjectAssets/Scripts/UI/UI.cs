@@ -10,12 +10,24 @@ public class UI : MonoBehaviour
 
     void Update()
     {
+        if (pauseMenu == null)
+        {
+            return;
+        }
+
         PauseMenu();
     }
 
     public void LoadScene(int sceneIndex)
     {
-        GameManager.instance.UnPauseGame();
+        if (GameManager.instance.isPaused)
+        {
+            GameManager.instance.UnPauseGame();
+        }
+        else
+        {
+            return;
+        }
         SceneManager.LoadScene(sceneIndex);
     }
 
@@ -36,5 +48,7 @@ public class UI : MonoBehaviour
             }
         }
     }
+
+
 
 }
