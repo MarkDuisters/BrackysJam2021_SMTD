@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.alexismorin.lightprobepopulator": {
+      "version": "file:com.alexismorin.lightprobepopulator@1.0.0",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.unity.burst": {
       "version": "1.4.4",
       "depth": 0,
