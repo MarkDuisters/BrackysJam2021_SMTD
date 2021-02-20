@@ -83,11 +83,14 @@ public class PlayerControllTarget : MonoBehaviour, Icell, IDamagable
 
         if (hp <= 0)
         {
+
             Kill ();
         }
     }
     public void Kill ()
     {
+
+        GameManager.instance.playerAlive = false;
         Camera.main.GetComponent<AudioListener> ().enabled = true;
         // Destroy (mainParent);
         mainParent.SetActive (false);
@@ -120,7 +123,7 @@ public class PlayerControllTarget : MonoBehaviour, Icell, IDamagable
                 {
                     timer = 0;
                     ApplyDamage (getIdamagable.dmg);
-//                    print (hp);
+                    //                    print (hp);
                 } //                print ("I dealt damage to-" + col.name);
             }
 

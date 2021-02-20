@@ -11,7 +11,9 @@ public class GameManager : MonoBehaviour, IGameState
 
     public int maxCreatures = 40;
 
-    [HideInInspector] public int creatureCount = 0;
+    [HideInInspector] public int creatureCount = 1;
+    [HideInInspector] public bool playerAlive = true;
+
     void Start ()
     {
         if (instance == null)

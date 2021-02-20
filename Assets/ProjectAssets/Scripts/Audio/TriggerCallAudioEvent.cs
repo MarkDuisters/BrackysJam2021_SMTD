@@ -21,6 +21,10 @@ public class TriggerCallAudioEvent : MonoBehaviour
 
     void OnTriggerEnter (Collider col)
     {
+        if (anim == null)
+        {
+            anim = GetComponent<Animator> ();
+        }
         if (col.tag == "Player")
         {
             anim.SetBool ("Open", true);
@@ -28,6 +32,12 @@ public class TriggerCallAudioEvent : MonoBehaviour
     }
     void OnTriggerExit (Collider col)
     {
+
+        if (anim == null)
+        {
+            anim = GetComponent<Animator> ();
+        }
+
         if (col.tag == "Player")
         {
             anim.SetBool ("Open", false);

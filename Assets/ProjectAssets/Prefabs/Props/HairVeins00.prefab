@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1226050446296139307
 Transform:
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3606371181428142932}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0.9999999}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -94,8 +94,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.8632076, g: 0.93991864, b: 1, a: 1}
-  m_Intensity: 3.09
-  m_Range: 7.18
+  m_Intensity: 2
+  m_Range: 9
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
