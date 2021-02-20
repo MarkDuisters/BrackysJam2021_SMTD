@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6947476214324149183
 Transform:
@@ -41,10 +41,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6947476214324149183}
     m_Modifications:
-    - target: {fileID: 4117611507162739884, guid: 6129aaf71e38d2345aa850190630323d, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8766ea05b1b719b48a788ffbb4db428a, type: 2}
     - target: {fileID: 4440752307271044472, guid: 6129aaf71e38d2345aa850190630323d, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -89,9 +85,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4449238821887127210, guid: 6129aaf71e38d2345aa850190630323d, type: 3}
+      propertyPath: m_Range
+      value: 9.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4449238821887127210, guid: 6129aaf71e38d2345aa850190630323d, type: 3}
+      propertyPath: m_Color.g
+      value: 0.84796864
+      objectReference: {fileID: 0}
+    - target: {fileID: 4449238821887127210, guid: 6129aaf71e38d2345aa850190630323d, type: 3}
+      propertyPath: m_Color.r
+      value: 0.4575472
+      objectReference: {fileID: 0}
+    - target: {fileID: 4449238821887127210, guid: 6129aaf71e38d2345aa850190630323d, type: 3}
+      propertyPath: m_Intensity
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4473178319132431882, guid: 6129aaf71e38d2345aa850190630323d, type: 3}
       propertyPath: m_Name
       value: HairVeins02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4473178319132431882, guid: 6129aaf71e38d2345aa850190630323d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6129aaf71e38d2345aa850190630323d, type: 3}
@@ -151,13 +167,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5885947785147570646, guid: b618550a2ff5fc04dbbaba9da4610a18, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8766ea05b1b719b48a788ffbb4db428a, type: 2}
+    - target: {fileID: 3693044638236249174, guid: b618550a2ff5fc04dbbaba9da4610a18, type: 3}
+      propertyPath: m_Range
+      value: 9.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 3693044638236249174, guid: b618550a2ff5fc04dbbaba9da4610a18, type: 3}
+      propertyPath: m_Color.g
+      value: 0.84796864
+      objectReference: {fileID: 0}
+    - target: {fileID: 3693044638236249174, guid: b618550a2ff5fc04dbbaba9da4610a18, type: 3}
+      propertyPath: m_Color.r
+      value: 0.4575472
+      objectReference: {fileID: 0}
+    - target: {fileID: 3693044638236249174, guid: b618550a2ff5fc04dbbaba9da4610a18, type: 3}
+      propertyPath: m_Intensity
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 9152026466553593454, guid: b618550a2ff5fc04dbbaba9da4610a18, type: 3}
       propertyPath: m_Name
       value: HairVeins01
+      objectReference: {fileID: 0}
+    - target: {fileID: 9152026466553593454, guid: b618550a2ff5fc04dbbaba9da4610a18, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b618550a2ff5fc04dbbaba9da4610a18, type: 3}
@@ -217,13 +249,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2699550661875233085, guid: 69af0a2a0f11ac24492c5ed8a815499e, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8766ea05b1b719b48a788ffbb4db428a, type: 2}
     - target: {fileID: 3606371181428142932, guid: 69af0a2a0f11ac24492c5ed8a815499e, type: 3}
       propertyPath: m_Name
       value: HairVeins00
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606371181428142932, guid: 69af0a2a0f11ac24492c5ed8a815499e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8912033792194091908, guid: 69af0a2a0f11ac24492c5ed8a815499e, type: 3}
+      propertyPath: m_Range
+      value: 9.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 8912033792194091908, guid: 69af0a2a0f11ac24492c5ed8a815499e, type: 3}
+      propertyPath: m_Color.g
+      value: 0.84796864
+      objectReference: {fileID: 0}
+    - target: {fileID: 8912033792194091908, guid: 69af0a2a0f11ac24492c5ed8a815499e, type: 3}
+      propertyPath: m_Color.r
+      value: 0.4575472
+      objectReference: {fileID: 0}
+    - target: {fileID: 8912033792194091908, guid: 69af0a2a0f11ac24492c5ed8a815499e, type: 3}
+      propertyPath: m_Intensity
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69af0a2a0f11ac24492c5ed8a815499e, type: 3}
@@ -239,10 +287,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6947476214324149183}
     m_Modifications:
-    - target: {fileID: 5528424932161756336, guid: 89dec3f97717e614c91e7d478177e9d9, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8766ea05b1b719b48a788ffbb4db428a, type: 2}
+    - target: {fileID: 1918616284460531046, guid: 89dec3f97717e614c91e7d478177e9d9, type: 3}
+      propertyPath: m_Range
+      value: 9.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918616284460531046, guid: 89dec3f97717e614c91e7d478177e9d9, type: 3}
+      propertyPath: m_Color.g
+      value: 0.84796864
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918616284460531046, guid: 89dec3f97717e614c91e7d478177e9d9, type: 3}
+      propertyPath: m_Color.r
+      value: 0.4575472
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918616284460531046, guid: 89dec3f97717e614c91e7d478177e9d9, type: 3}
+      propertyPath: m_Intensity
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6894310649904281826, guid: 89dec3f97717e614c91e7d478177e9d9, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -290,6 +350,10 @@ PrefabInstance:
     - target: {fileID: 7763850754616907138, guid: 89dec3f97717e614c91e7d478177e9d9, type: 3}
       propertyPath: m_Name
       value: HairVeins03
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763850754616907138, guid: 89dec3f97717e614c91e7d478177e9d9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89dec3f97717e614c91e7d478177e9d9, type: 3}

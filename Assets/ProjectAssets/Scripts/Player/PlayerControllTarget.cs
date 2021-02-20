@@ -120,7 +120,7 @@ public class PlayerControllTarget : MonoBehaviour, Icell, IDamagable
                 {
                     timer = 0;
                     ApplyDamage (getIdamagable.dmg);
-                    print (hp);
+//                    print (hp);
                 } //                print ("I dealt damage to-" + col.name);
             }
 

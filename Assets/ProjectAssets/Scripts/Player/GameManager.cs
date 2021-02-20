@@ -28,11 +28,13 @@ public class GameManager : MonoBehaviour, IGameState
     {
         EnableMouse ();
         isPaused = true;
+        Time.timeScale = 0.00001f;
     }
     public void UnPauseGame ()
     {
         DissableMouse ();
         isPaused = false;
+        Time.timeScale = 1;
 
     }
 
