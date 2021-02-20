@@ -131,8 +131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d9003e68abf0242816c5ace9143744, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  dash: 2
+  speed: 3
+  dash: 4
   followTarget: {fileID: 0}
   followThreshold: 1
   setHP: 1

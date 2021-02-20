@@ -26,7 +26,7 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
     [SerializeField] private int setDmg = 1;
     public int dmg { get; set; }
 
-    public enum CellType { Bacteria, WhiteBloodCell }
+    public enum CellType { Bacteria, WhiteBloodCell, Controller }
 
     [Header ("Icell interface")]
     [SerializeField] CellType setCellType = CellType.Bacteria;
@@ -157,11 +157,11 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
         //only deal damage to a damagable object if it is not part of our celltype
         if (getIdamagable != null && getIcell != null)
         {
-            if (getIcell.cellType != cellType)
+            if (getIcell.cellType == (byte) CellType.WhiteBloodCell)
             {
                 getIdamagable.ApplyDamage (dmg);
                 ApplyDamage (getIdamagable.dmg);
-                print ("I dealt damage to-" + col.name);
+                //                print ("I dealt damage to-" + col.name);
             }
 
         }

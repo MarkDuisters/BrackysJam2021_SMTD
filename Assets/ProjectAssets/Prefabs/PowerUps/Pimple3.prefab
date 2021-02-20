@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2516863706235434742}
   - component: {fileID: 4911562662853349169}
   - component: {fileID: 1790233704427371537}
+  - component: {fileID: 4233074258714376198}
   m_Layer: 0
   m_Name: Pimple3
   m_TagString: Untagged
@@ -26,14 +27,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7134285414266618063}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -1.8288, y: 0.000000004844666, z: -1.6255999}
-  m_LocalScale: {x: 0.63209504, y: 1, z: 0.79600203}
+  m_LocalScale: {x: 4.445587, y: 7.033101, z: 5.5983624}
   m_Children:
   - {fileID: 4597341141927204535}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &2516863706235434742
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -96,7 +97,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cellType: 0
-  resource: 2
+  resource: 20
+--- !u!136 &4233074258714376198
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7134285414266618063}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.4628206
+  m_Height: 1.2276624
+  m_Direction: 1
+  m_Center: {x: -0.039786134, y: -0.0383684, z: -0.00416571}
 --- !u!1 &9084347194256302299
 GameObject:
   m_ObjectHideFlags: 0

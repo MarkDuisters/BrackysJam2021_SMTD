@@ -24,7 +24,7 @@ public class WhiteBloodCell : MonoBehaviour, Icell, IDamagable
     [SerializeField] private int setDmg = 1;
     public int dmg { get; set; }
 
-    public enum CellType { Bacteria, WhiteBloodCell }
+    public enum CellType { Bacteria, WhiteBloodCell,Controller }
 
     [Header ("Icell interface")]
     [SerializeField] CellType setCellType = CellType.WhiteBloodCell;
@@ -114,7 +114,7 @@ public class WhiteBloodCell : MonoBehaviour, Icell, IDamagable
         Destroy (gameObject);
     }
 
-    public void OnTriggerEnter (Collider col)
+    public void OnTriggerStay (Collider col)
     {
 
         if (col.isTrigger == true)
@@ -133,7 +133,7 @@ public class WhiteBloodCell : MonoBehaviour, Icell, IDamagable
             {
                 followTarget = col.transform;
 
-//                print (followTarget);
+                //                print (followTarget);
 
                 //   getIdamagable.ApplyDamage (dmg);
                 //                print ("I dealt damage to-" + col.name);
