@@ -2,18 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pause : MonoBehaviour, IGameState
+public class GameManager : MonoBehaviour, IGameState
 {
 
     public bool isPaused { get; set; }
 
-    static public Pause pauseInstance;
+    static public GameManager instance;
 
+    public int maxCreatures = 40;
+
+    [HideInInspector] public int creatureCount = 0;
     void Start ()
     {
-        if (pauseInstance == null)
+        if (instance == null)
         {
-            pauseInstance = this;
+            instance = this;
         }
         else
         {

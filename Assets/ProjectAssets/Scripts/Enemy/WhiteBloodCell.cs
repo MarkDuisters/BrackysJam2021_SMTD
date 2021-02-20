@@ -14,7 +14,8 @@ public class WhiteBloodCell : MonoBehaviour, Icell, IDamagable
 
     Rigidbody rb;
 
-    [SerializeField] Transform followTarget;
+    public Transform followTarget { get; set; }
+
     [SerializeField] float followThreshold = 1f;
 
     [Header ("IDamagable interface")]
@@ -24,7 +25,7 @@ public class WhiteBloodCell : MonoBehaviour, Icell, IDamagable
     [SerializeField] private int setDmg = 1;
     public int dmg { get; set; }
 
-    public enum CellType { Bacteria, WhiteBloodCell,Controller }
+    public enum CellType { Bacteria, WhiteBloodCell, Controller }
 
     [Header ("Icell interface")]
     [SerializeField] CellType setCellType = CellType.WhiteBloodCell;

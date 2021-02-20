@@ -30,6 +30,7 @@ public class PlayerControllTarget : MonoBehaviour, Icell, IDamagable
     public byte cellType { get; set; }
 
     #region 
+    public Transform followTarget { get; set; }
     public int splitAmount { get; set; }
     public float energy { get; set; }
     public float energyDrain { get; set; }
@@ -87,9 +88,9 @@ public class PlayerControllTarget : MonoBehaviour, Icell, IDamagable
     }
     public void Kill ()
     {
-        Camera.main.GetComponent<AudioListener>().enabled = true;
-       // Destroy (mainParent);
-       mainParent.SetActive(false);
+        Camera.main.GetComponent<AudioListener> ().enabled = true;
+        // Destroy (mainParent);
+        mainParent.SetActive (false);
     }
 
     //empty functions, they do nothing but the interface will give a bitchfit if they are not here.

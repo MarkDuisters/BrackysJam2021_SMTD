@@ -187,9 +187,9 @@ Material:
     - _SrcBlend: 1
     - _SubSurfaceScale: 2.87
     - _Surface: 0
-    - _TessMax: 30
-    - _TessMin: 10
-    - _TessValue: 4
+    - _TessMax: 0
+    - _TessMin: 0
+    - _TessValue: 1
     - _TransAmbient: 0.181
     - _TransDirect: 0.739
     - _TransNormal: 1

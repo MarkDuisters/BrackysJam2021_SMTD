@@ -15,7 +15,9 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
 
     Rigidbody rb;
 
-    [SerializeField] Transform followTarget;
+    [SerializeField] Transform setFollowTarget;
+    public Transform followTarget { get; set; }
+
     [SerializeField] float followThreshold = 1f;
 
     [Header ("IDamagable interface")]
@@ -58,6 +60,7 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
         energy = setEnergy;
         energyDrain = setEnergyDrain;
         splitSound = setSplitSound;
+        followTarget = setFollowTarget;
         rb = GetComponent<Rigidbody> ();
 
     }
@@ -116,6 +119,7 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
 
         for (int i = 0; i < splitAmount; i++)
         {
+            GameManager.instance.creatureCount++;
             GameObject clone = Instantiate (gameObject);
             float x, y, z;
             x = transform.position.x + Random.Range (-0.5f, 0.5f);
