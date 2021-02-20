@@ -161,7 +161,7 @@ Material:
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DispSpeed: 3
-    - _Displacement: 0
+    - _Displacement: 0.103
     - _DstBlend: 0
     - _Emission: 0
     - _EmissionIntensity: 1
