@@ -13,9 +13,15 @@ public class UI : MonoBehaviour
         PauseMenu();
     }
 
-    public void LoadScene()
+    public void LoadScene( int sceneIndex)
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(sceneIndex);
+    }
+
+    public void ReturnToTitle(int sceneIndex)
+    {
+        GameManager.instance.UnPauseGame();
+        LoadScene(sceneIndex);
     }
 
     public void PauseMenu()
