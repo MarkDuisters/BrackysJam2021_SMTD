@@ -8,47 +8,59 @@ public class UI : MonoBehaviour
 
     public GameObject pauseMenu;
 
-    void Update()
+    public bool startMenu = false;
+
+    void Start ()
+    {
+        if (startMenu)
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
+
+    void Update ()
     {
         if (pauseMenu == null)
         {
             return;
         }
 
-        PauseMenu();
+        PauseMenu ();
     }
 
-    public void LoadScene(int sceneIndex)
+    public void LoadScene (int sceneIndex)
     {
-        if (GameManager.instance.isPaused)
+        if (!startMenu)
         {
-            GameManager.instance.UnPauseGame();
-        }
-        else
-        {
-            return;
-        }
-        SceneManager.LoadScene(sceneIndex);
-    }
-
-    public void PauseMenu()
-    {
-        if (Input.GetButtonDown("Pause"))
-        {
-            GameManager.instance.isPaused = !GameManager.instance.isPaused;
-            pauseMenu.SetActive(GameManager.instance.isPaused);
-
             if (GameManager.instance.isPaused)
             {
-                GameManager.instance.PauseGame();
+                GameManager.instance.UnPauseGame ();
             }
             else
             {
-                GameManager.instance.UnPauseGame();
+                return;
+            }
+        }
+        
+        SceneManager.LoadScene (sceneIndex);
+    }
+
+    public void PauseMenu ()
+    {
+        if (Input.GetButtonDown ("Pause"))
+        {
+            GameManager.instance.isPaused = !GameManager.instance.isPaused;
+            pauseMenu.SetActive (GameManager.instance.isPaused);
+
+            if (GameManager.instance.isPaused)
+            {
+                GameManager.instance.PauseGame ();
+            }
+            else
+            {
+                GameManager.instance.UnPauseGame ();
             }
         }
     }
-
-
 
 }
