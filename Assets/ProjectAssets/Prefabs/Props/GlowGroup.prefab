@@ -41,10 +41,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6947476214324149183}
     m_Modifications:
-    - target: {fileID: 4117611507162739884, guid: 6129aaf71e38d2345aa850190630323d, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8766ea05b1b719b48a788ffbb4db428a, type: 2}
     - target: {fileID: 4440752307271044472, guid: 6129aaf71e38d2345aa850190630323d, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -151,10 +147,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5885947785147570646, guid: b618550a2ff5fc04dbbaba9da4610a18, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8766ea05b1b719b48a788ffbb4db428a, type: 2}
     - target: {fileID: 9152026466553593454, guid: b618550a2ff5fc04dbbaba9da4610a18, type: 3}
       propertyPath: m_Name
       value: HairVeins01
@@ -217,10 +209,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2699550661875233085, guid: 69af0a2a0f11ac24492c5ed8a815499e, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8766ea05b1b719b48a788ffbb4db428a, type: 2}
     - target: {fileID: 3606371181428142932, guid: 69af0a2a0f11ac24492c5ed8a815499e, type: 3}
       propertyPath: m_Name
       value: HairVeins00
@@ -239,10 +227,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6947476214324149183}
     m_Modifications:
-    - target: {fileID: 5528424932161756336, guid: 89dec3f97717e614c91e7d478177e9d9, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8766ea05b1b719b48a788ffbb4db428a, type: 2}
     - target: {fileID: 6894310649904281826, guid: 89dec3f97717e614c91e7d478177e9d9, type: 3}
       propertyPath: m_RootOrder
       value: 3

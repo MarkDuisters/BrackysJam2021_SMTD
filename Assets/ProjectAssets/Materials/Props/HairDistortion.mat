@@ -10,7 +10,7 @@ Material:
   m_Name: HairDistortion
   m_Shader: {fileID: 4800000, guid: 6accf955d15587c409b6a16022d2b52c, type: 3}
   m_ShaderKeywords: 
-  m_LightmapFlags: 4
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -107,7 +107,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _Distortion: 1
     - _DstBlend: 0
-    - _Emission: 6.15
+    - _Emission: 10.3
     - _EnvironmentReflections: 1
     - _Frequency: 4
     - _Frequentie: 1
