@@ -13,15 +13,10 @@ public class UI : MonoBehaviour
         PauseMenu();
     }
 
-    public void LoadScene( int sceneIndex)
-    {
-        SceneManager.LoadScene(sceneIndex);
-    }
-
-    public void ReturnToTitle(int sceneIndex)
+    public void LoadScene(int sceneIndex)
     {
         GameManager.instance.UnPauseGame();
-        LoadScene(sceneIndex);
+        SceneManager.LoadScene(sceneIndex);
     }
 
     public void PauseMenu()
