@@ -22,11 +22,12 @@ public class BacteriaMessage : MonoBehaviour
         {
             if (GameManager.instance.creatureCount < GameManager.instance.maxCreatures)
             {
-                text.SetText (message + GameManager.instance.creatureCount);
+                text.SetText (message + GameManager.instance.creatureCount + "/" + GameManager.instance.maxCreatures);
                 StartCoroutine (ShowText ());
             }
             else if (GameManager.instance.creatureCount >= GameManager.instance.maxCreatures)
             {
+                GetComponent<Animator> ().enabled = true;
                 GetComponent<TriggerCallAudioEvent> ().enabled = true;
             }
 

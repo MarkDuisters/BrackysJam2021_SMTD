@@ -14,9 +14,10 @@ public class TriggerKillBacteria : MonoBehaviour
     void OnTriggerEnter (Collider col)
     {
 
-        if (col.GetComponent<Icell> ().cellType == (byte) setCellType && col.GetComponent<Icell> ().cellType == (byte) CellType.Controller)
+        Icell cell = col.GetComponent<Icell> ();
+        if (cell.cellType == (byte) setCellType)
         {
-            col.GetComponent<IDamagable> ().Kill ();
+            cell.followTarget = col.transform;
         }
     }
 }
