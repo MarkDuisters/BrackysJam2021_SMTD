@@ -10166,6 +10166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCreatures: 40
   creatureCount: 0
+  playerAlive: 1
 --- !u!1 &7501840087021890474
 GameObject:
   m_ObjectHideFlags: 0

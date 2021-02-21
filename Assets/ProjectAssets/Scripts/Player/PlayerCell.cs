@@ -68,6 +68,11 @@ public class PlayerCell : MonoBehaviour, Icell, IDamagable
     void Update ()
     {
 
+        if (followTarget == null)
+        {
+            Kill ();
+        }
+
         currentSpeed = Input.GetButton ("Dash") ? speed * dash : speed;
         Vector3 forward = new Vector3 ();
         float distance = Vector3.Distance (transform.position, followTarget.position);
