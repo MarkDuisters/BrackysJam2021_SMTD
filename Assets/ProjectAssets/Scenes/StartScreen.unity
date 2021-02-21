@@ -674,10 +674,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5353067325438778448}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
-        m_Mode: 6
+      - m_Target: {fileID: 8279262401059094939}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
+        m_MethodName: ExitGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8784,7 +8784,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0.007, y: -86.544, z: 0.168}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -15.05, y: 0.85}
+  m_AnchoredPosition: {x: -17.8, y: 1.4}
   m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &3937777246496958228
