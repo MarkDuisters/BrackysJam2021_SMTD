@@ -15,38 +15,38 @@ public class UI : MonoBehaviour
     bool isExecuting = false;
     public bool startMenu = false;
 
-    void Start()
+    void Start ()
     {
         if (startMenu)
         {
             if (GameManager.instance != null)
             {
-                GameManager.instance.UnPauseGame();
+                GameManager.instance.UnPauseGame ();
             }
             Cursor.lockState = CursorLockMode.None;
 
         }
     }
 
-    void Update()
+    void Update ()
     {
         if (pauseMenu == null)
         {
             return;
         }
 
-        Death();
+        Death ();
 
-        PauseMenu();
+        PauseMenu ();
     }
 
-    public void LoadScene(int sceneIndex)
+    public void LoadScene (int sceneIndex)
     {
         if (!startMenu)
         {
             if (GameManager.instance.isPaused)
             {
-                GameManager.instance.UnPauseGame();
+                GameManager.instance.UnPauseGame ();
             }
             else
             {
@@ -54,49 +54,53 @@ public class UI : MonoBehaviour
             }
         }
 
-        SceneManager.LoadScene(sceneIndex);
+        SceneManager.LoadScene (sceneIndex);
     }
 
-    public void PauseMenu()
+    public void PauseMenu ()
     {
-        if (Input.GetButtonDown("Pause"))
+        if (Input.GetButtonDown ("Pause"))
         {
             GameManager.instance.isPaused = !GameManager.instance.isPaused;
-            pauseMenu.SetActive(GameManager.instance.isPaused);
+            pauseMenu.SetActive (GameManager.instance.isPaused);
 
             if (GameManager.instance.isPaused)
             {
-                GameManager.instance.PauseGame();
+                GameManager.instance.PauseGame ();
             }
             else
             {
-                GameManager.instance.UnPauseGame();
+                GameManager.instance.UnPauseGame ();
             }
         }
     }
 
-
-    public void Continue()
+    public void Continue ()
     {
-        GameManager.instance.UnPauseGame();
+        GameManager.instance.UnPauseGame ();
     }
 
-    public void Death()
+    public void Death ()
     {
         if (!GameManager.instance.playerAlive && !isExecuting)
         {
             isExecuting = true;
-            StartCoroutine(ExecuteDeath());
+            StartCoroutine (ExecuteDeath ());
         }
     }
 
-    IEnumerator ExecuteDeath()
+    public void ExitGame ()
     {
-        deathScreen.SetActive(true);
-        yield return new WaitForSeconds(waitingTime);
-        deathScreen.SetActive(false);
-        loadingScreen.SetActive(true);
+        Application.Quit ();
+}
 
-    }
+IEnumerator ExecuteDeath ()
+{
+    deathScreen.SetActive (true);
+    yield return new WaitForSeconds (waitingTime);
+    deathScreen.SetActive (false);
+    loadingScreen.SetActive (true);
+
+}
 
 }
