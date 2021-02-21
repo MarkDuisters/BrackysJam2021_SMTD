@@ -7,6 +7,16 @@ public class EndGame : MonoBehaviour
     public GameObject playerContainer;
     public GameObject enemyContainer;
     public GameObject endCredits;
+
+    public AudioSource[] ass;
+
+    void Update ()
+    {
+        foreach (AudioSource childAss in ass)
+        {
+            childAss.volume = Mathf.Clamp (1f * Vector3.Distance (childAss.transform.position, Camera.main.transform.position), 0f, 1f);
+        }
+    }
     // Start is called before the first frame update
     void OnTriggerEnter (Collider col)
     {
@@ -15,7 +25,7 @@ public class EndGame : MonoBehaviour
 
             Destroy (enemyContainer);
             Destroy (playerContainer);
-            endCredits.SetActive(true);
+            Camera.main.gameObject.GetComponent<AudioListener> ().enabled = true;
 
         }
 
