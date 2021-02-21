@@ -15,6 +15,7 @@ public class EndGame : MonoBehaviour
 
             Destroy (enemyContainer);
             Destroy (playerContainer);
+            endCredits.SetActive(true);
 
         }
 

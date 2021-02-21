@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &419542212 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3562779868005198256, guid: a2b466c098b173841aa4adf13488de9e, type: 3}
-  m_PrefabInstance: {fileID: 1625564348134734421}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1839735500
 GameObject:
   m_ObjectHideFlags: 0
@@ -16557,17 +16552,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 514061515338823657, guid: a2b466c098b173841aa4adf13488de9e, type: 3}
-      propertyPath: m_text
-      value: "Mark Duisters:\n\n Audio effects, voice acting, programming(logic and
-        shaders), UI, texturing/UI-sprites, level interactions.\n\nStijn Bellemans:\n\n
-        Level design, core UI, modeling(props and level), UX.\n\nThomas P\xE9: \n\nModeling
-        (props), Audio(Theme and music), level building, level interactions."
-      objectReference: {fileID: 0}
-    - target: {fileID: 514061515338823657, guid: a2b466c098b173841aa4adf13488de9e, type: 3}
-      propertyPath: m_fontStyle
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1625564347545022768, guid: a2b466c098b173841aa4adf13488de9e, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -16616,40 +16600,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment
       objectReference: {fileID: 0}
-    - target: {fileID: 1934710564421269934, guid: a2b466c098b173841aa4adf13488de9e, type: 3}
-      propertyPath: m_text
-      value: "Special thanks to our friends, wives and family for putting up with
-        us making bizarre sounds and noises. \n\n\n\n\n\n\n\n\n\n\nTheme song remix
-        based on the works of:\nFesliyan Studios\nBackground music via https://www.fesliyanstudios.com/\r\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2955346829802858991, guid: a2b466c098b173841aa4adf13488de9e, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3316152635845499364, guid: a2b466c098b173841aa4adf13488de9e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -1402.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4318112832184165810, guid: a2b466c098b173841aa4adf13488de9e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 17.416
-      objectReference: {fileID: 0}
-    - target: {fileID: 4318112832184165810, guid: a2b466c098b173841aa4adf13488de9e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -1653
-      objectReference: {fileID: 0}
-    - target: {fileID: 6276916565489225014, guid: a2b466c098b173841aa4adf13488de9e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.00024414
-      objectReference: {fileID: 0}
-    - target: {fileID: 6276916565489225014, guid: a2b466c098b173841aa4adf13488de9e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -673
-      objectReference: {fileID: 0}
-    - target: {fileID: 8614291303229264703, guid: a2b466c098b173841aa4adf13488de9e, type: 3}
-      propertyPath: enemyContainer
-      value: 
-      objectReference: {fileID: 419542212}
     - target: {fileID: 8614291303229264703, guid: a2b466c098b173841aa4adf13488de9e, type: 3}
       propertyPath: playerContainer
       value: 
